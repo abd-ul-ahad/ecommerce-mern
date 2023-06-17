@@ -5,3 +5,10 @@
 :root {
   --dark: #212a2f;
 }
+
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}

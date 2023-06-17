@@ -3,61 +3,17 @@ import { BiSearchAlt2 } from "react-icons/bi";
 import { BsFillPersonFill } from "react-icons/bs";
 
 export default function Navbar() {
-  const leftSideLinks = [
-    {
-      name: "MEN",
-      link: "",
-    },
-    {
-      name: "WOMEN",
-      link: "",
-    },
-    {
-      name: "KIDS",
-      link: "",
-    },
-    {
-      name: "SOCKS",
-      link: "",
-    },
-    {
-      name: "SALE",
-      link: "",
-    },
-  ];
-  const rightSideLinks = [
-    {
-      name: "SUSTAINABILITY",
-      link: "",
-    },
-    {
-      name: "RERUN",
-      link: "",
-    },
-    {
-      name: "STORES",
-      link: "",
-    },
-    {
-      name: <BiSearchAlt2 size={24} />,
-      link: "",
-    },
-    {
-      name: <BsFillPersonFill size={24} />,
-      link: "",
-    },
-  ];
   return (
     <nav>
       <TopBar />
 
-      <div className="flex justify-between items-center py-1">
+      <div className="flex justify-between items-center py-1 px-2">
         <div>
           <ul className="flex justify-center items-center">
             {leftSideLinks?.map((item, key) => {
               return (
                 <Link href={item.link} key={key}>
-                  <li className="px-4 text-sm font-semibold tracking-widest">
+                  <li className="px-4 text-sm font-semibold tracking-widest hover:underline">
                     {item.name}
                   </li>
                 </Link>
@@ -75,7 +31,7 @@ export default function Navbar() {
             {rightSideLinks?.map((item, key) => {
               return (
                 <Link href={item.link} key={key}>
-                  <li className="px-4 text-sm font-semibold tracking-widest">
+                  <li className="px-4 text-sm font-semibold tracking-widest hover:underline">
                     {item.name}
                   </li>
                 </Link>
@@ -99,3 +55,48 @@ const TopBar = () => {
     </div>
   );
 };
+
+const leftSideLinks = [
+  {
+    name: "MEN",
+    link: "",
+  },
+  {
+    name: "WOMEN",
+    link: "",
+  },
+  {
+    name: "KIDS",
+    link: "",
+  },
+  {
+    name: "SOCKS",
+    link: "",
+  },
+  {
+    name: "SALE",
+    link: "",
+  },
+];
+const rightSideLinks = [
+  {
+    name: "SUSTAINABILITY",
+    link: "",
+  },
+  {
+    name: "RERUN",
+    link: "",
+  },
+  {
+    name: "STORES",
+    link: "",
+  },
+  {
+    name: <BiSearchAlt2 size={24} />,
+    link: "",
+  },
+  {
+    name: <BsFillPersonFill size={24} />,
+    link: "",
+  },
+];
