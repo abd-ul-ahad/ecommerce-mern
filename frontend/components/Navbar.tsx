@@ -4,7 +4,7 @@ import { BsFillPersonFill } from "react-icons/bs";
 
 export default function Navbar() {
   return (
-    <nav>
+    <nav className="hidden lg:block">
       <TopBar />
 
       <div className="flex justify-between items-center py-1 px-2">
