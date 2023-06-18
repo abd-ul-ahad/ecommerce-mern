@@ -6,7 +6,7 @@ import { FaFacebookF, FaPinterestP } from "react-icons/fa";
 export default function Footer() {
   return (
     <div className="bg-[var(--dark)] px-20 py-10 space-y-4">
-      <div className="flex justify-between items-start">
+      <div className="flex justify-between flex-col lg:flex-row space-y-7 items-start">
         {_links?.map((item, i) => {
           return (
             <div key={i}>
@@ -15,8 +15,8 @@ export default function Footer() {
           );
         })}
       </div>
-      <div className="text-white flex justify-between items-center">
-        <div className="space-y-3">
+      <div className="text-white flex-col lg:flex-row flex justify-between items-center">
+        <div className="space-y-3 mb-6 mt-8">
           <h6 className="text-lg font-bold tracking-widest">
             FOLLOW THE FLOCK
           </h6>
@@ -41,11 +41,11 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex flex-col justify-center items-center w-full">
-          <p className="text-sm">
+          <p className="text-sm text-center">
             © 2023 Allbirds, Inc. All Rights Reserved. Terms, Privacy &
             Accessibility
           </p>
-          <p className="text-sm">Do Not Sell My Personal Information</p>
+          <p className="text-sm underline">Do Not Sell My Personal Information</p>
         </div>
       </div>
     </div>

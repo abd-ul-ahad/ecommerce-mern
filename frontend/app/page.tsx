@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <section>
       <Hero />
-      <div className="bg-[var(--dark)] flex justify-center items-center py-2">
-        <p className="text-white space-x-2 text-sm">
+      <div className="bg-[var(--dark)] flex justify-center items-center py-2 ">
+        <p className="text-white space-x-2 lg:text-sm text-xs px-8 flex flex-col items-center lg:flex-row">
           <span className="font-bold">Discover Your Perfect Pair</span>
           <span>Try our Style Quiz to find the best pair fot you.</span>
           <span className="underline">Take the Style Quiz</span>
@@ -18,11 +18,15 @@ export default function Home() {
         <img src="/images/foot.avif" className="w-full" alt="" />
       </div>
       <div className="flex flex-col justify-center items-center space-y-3 py-14">
-        <h5 className="text-4xl font-bold">Summer Trips Need Super Packable</h5>
-        <h5 className="text-4xl font-bold">Shoes</h5>
+        <div className="flex justify-center items-center flex-col">
+          <h5 className="md:text-4xl text-xl font-bold text-center">
+            Summer Trips Need Super Packable
+          </h5>
+          <h5 className="md:text-4xl text-xl font-bold">Shoes</h5>
+        </div>
         <p>We’ve got your 10,000 steps covered, easy.</p>
-        <div className="flex justify-center items-center">
-          <button className="bg-[var(--dark)] text-[white] text-sm font-bold tracking-widest py-3 px-12 ml-5 hover:bg-[white] hover:text-[var(--dark)]">
+        <div className="flex lg:flex-row flex-col justify-center items-center">
+          <button className="bg-[var(--dark)] text-[white] text-sm mb-3 md:mb-0 font-bold tracking-widest py-3 px-12 ml-5 hover:bg-[white] hover:text-[var(--dark)]">
             SHOP MEN
           </button>
           <button className="bg-[var(--dark)] text-[white] text-sm font-bold tracking-widest py-3 px-9 ml-5 hover:bg-white hover:text-[var(--dark)]">
@@ -44,17 +48,17 @@ const Hero = () => {
       }}
     >
       <div className="space-y-3 px-6">
-        <h4 className="text-6xl font-bold">The Summer Jam</h4>
-        <p className="font-semibold">
+        <h4 className="lg:text-6xl text-4xl font-bold">The Summer Jam</h4>
+        <p className="font-semibold text-sm lg:text-base">
           The lightweight Tree Runner is ready for anything summer throws at
           you.
         </p>
 
-        <div className="flex justify-start items-center">
-          <button className="bg-white text-[black] text-sm font-bold tracking-widest py-3 px-9 ml-5 hover:bg-[var(--dark)] hover:text-white">
+        <div className="flex md:justify-start md:flex-row flex-col md:items-start justify-center items-center lg:space-y-0 space-y-3">
+          <button className="bg-white text-[black] md:text-sm text-xs font-bold tracking-widest py-3 px-9 md:ml-1 hover:bg-[var(--dark)] hover:text-white">
             SHOP MEN
           </button>
-          <button className="bg-white text-[black] text-sm font-bold tracking-widest py-3 px-9 ml-5 hover:bg-[var(--dark)] hover:text-white">
+          <button className="bg-white text-[black] md:text-sm text-xs font-bold tracking-widest py-3 px-9 md:ml-5 hover:bg-[var(--dark)] hover:text-white">
             SHOP WOMEN
           </button>
         </div>
@@ -70,10 +74,12 @@ const Favorites = () => {
   return (
     <div className="py-10 px-16">
       <div className="w-full flex justify-center items-center py-5">
-        <h1 className="text-4xl font-bold tracking-widest">Our Favorites</h1>
+        <h1 className="md:text-4xl text-2xl font-bold tracking-widest">
+          Our Favorites
+        </h1>
       </div>
 
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center lg:flex-row flex-col items-center">
         {tabs?.map((item, i) => {
           return (
             <button
@@ -83,21 +89,21 @@ const Favorites = () => {
                 tabI === i
                   ? "text-[black] border-[black] border-b-2"
                   : "text-[grey] border-[grey] border-b-2"
-              } font-semibold tracking-widest px-16`}
+              } font-semibold tracking-widest px-1 text-sm lg:text-base lg:px-16`}
             >
               {item}
             </button>
           );
         })}
       </div>
-      <div className="flex justify-between items-center py-10">
+      <div className="flex justify-between lg:flex-row flex-col items-center py-10">
         {images?.map((item, i) => {
           return (
             <>
               {tabI === item.i && (
                 <div
                   key={i}
-                  className="border-2"
+                  className="border-2 mb-5"
                   style={{
                     boxShadow: "rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;",
                   }}
@@ -114,7 +120,7 @@ const Favorites = () => {
                     </div>
                   </div>
                   <div className="my-4 mx-2">
-                    <h3 className="text-xl font-bold tracking-widest">
+                    <h3 className="md:text-xl text-lg font-bold tracking-widest">
                       {item.title}
                     </h3>
                   </div>
@@ -132,9 +138,9 @@ const OnSale = () => {
   return (
     <div className="px-20 py-8">
       <div className="pb-7">
-        <h5 className="text-4xl font-bold">Now On Sale</h5>
+        <h5 className="md:text-4xl text-2xl font-bold">Now On Sale</h5>
       </div>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between lg:flex-row flex-col items-center">
         <ProductCard />
         <ProductCard />
         <ProductCard />
