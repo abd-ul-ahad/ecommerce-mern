@@ -45,7 +45,9 @@ export default function Footer() {
             © 2023 Allbirds, Inc. All Rights Reserved. Terms, Privacy &
             Accessibility
           </p>
-          <p className="text-sm underline">Do Not Sell My Personal Information</p>
+          <p className="text-sm underline">
+            Do Not Sell My Personal Information
+          </p>
         </div>
       </div>
     </div>

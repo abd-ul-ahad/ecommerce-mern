@@ -313,6 +313,6 @@ const rightSideLinks = [
   },
   {
     name: <BsFillPersonFill size={24} />,
-    link: "",
+    link: "/login",
   },
 ];
