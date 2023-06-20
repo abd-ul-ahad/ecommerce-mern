@@ -56,19 +56,19 @@ yarn run dev
 ## Project Structure
 
 The project has the following directory structure:
-.
-├── frontend
-│ ├── components
-│ ├── app
-│ ├── public
-│ ├── .env
-│ └── ...
-├── backend
-│ ├── models
-│ ├── routes
-│ └── ...
-├── README.md
-└── ...
+
+`├── frontend`
+`│ ├── components`
+`│ ├── app`
+`│ ├── public`
+`│ ├── .env`
+`│ └── ...`
+`├── backend`
+`│ ├── models`
+`│ ├── routes`
+`│ └── ...`
+`├── README.md`
+`└── ...`
 
 ## Contact
 
