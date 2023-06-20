@@ -86,10 +86,10 @@ const _links = [
   {
     title: "SHOES",
     flinks: [
-      { _link: "", nam: "Men's Shoes" },
-      { _link: "", nam: "Women's Shoes" },
-      { _link: "", nam: "Men's Apparel" },
-      { _link: "", nam: "Women's Apparel" },
+      { _link: "", nam: "Men&#39;s Shoes" },
+      { _link: "", nam: "Women&#39;s Shoes" },
+      { _link: "", nam: "Men&#39;s Apparel" },
+      { _link: "", nam: "Women&#39;s Apparel" },
       { _link: "", nam: "Socks" },
       { _link: "", nam: "Gift Cards" },
       { _link: "", nam: "Refer a Friend" },

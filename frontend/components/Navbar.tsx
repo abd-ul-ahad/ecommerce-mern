@@ -54,7 +54,7 @@ const TopBar = () => {
   return (
     <div className="bg-[var(--dark)] flex justify-center items-center py-2">
       <p className="text-white text-xs md:text-xs text-center md:px-0 px-5">
-        Need a last-minute Father's Day gift?{" "}
+        Need a last-minute Father&#39;s Day gift?{" "}
         <span className="underline"> Find A Store Near You</span> |{" "}
         <span className="underline">Shop Gift Cards</span>
       </p>

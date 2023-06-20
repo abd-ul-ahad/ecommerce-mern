@@ -9,7 +9,7 @@ export default function ProductCard() {
         />
       </div>
       <div className="py-3 px-5">
-        <h3 className="font-bold md:text-2xl text-xl">Women's Tree Flyer</h3>
+        <h3 className="font-bold md:text-2xl text-xl">Women&#39;s Tree Flyer</h3>
         <p className="font-sm">Natural Black, Now: $89</p>
       </div>
     </div>
