@@ -99,10 +99,9 @@ const Favorites = () => {
       <div className="flex justify-between lg:flex-row flex-col items-center py-10">
         {images?.map((item, i) => {
           return (
-            <>
+            <div key={i}>
               {tabI === item.i && (
                 <div
-                  key={i}
                   className="border-2 mb-5"
                   style={{
                     boxShadow: "rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;",
@@ -126,7 +125,7 @@ const Favorites = () => {
                   </div>
                 </div>
               )}
-            </>
+            </div>
           );
         })}
       </div>

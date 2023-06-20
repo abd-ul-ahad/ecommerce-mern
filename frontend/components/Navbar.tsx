@@ -237,20 +237,6 @@ const MobMenu = () => {
                 </button>
               </div>
             </div>
-            <div className="flex justify-center space-x-4 items-center mb-10">
-              <Link href={process.env.INSTA_LINK || ""}>
-                <GrInstagram color="#C13584" size={23} />
-              </Link>
-              <Link href={process.env.TWITTER_LINK || ""}>
-                <BsTwitter color="#00acee" size={23} />
-              </Link>
-              <Link href={process.env.FACEBOOK_LINK || ""}>
-                <FaFacebookF color="#3b5998" size={23} />
-              </Link>
-              <Link href={process.env.PINTEREST_LINK || ""}>
-                <FaPinterestP color="#c8232c" size={23} />
-              </Link>
-            </div>
           </div>
         </div>
 

@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 var jwt = require("jsonwebtoken");
 const fs = require("fs");
 const path = require("path");
+const cors = require("cors");
 
 let publicKey;
 fs.readFile(
@@ -15,6 +16,7 @@ class Server {
   constructor() {
     this.server = express();
     this.server.use(express.json());
+    this.server.use(cors());
   }
 
   async connectDatabase(conString) {
