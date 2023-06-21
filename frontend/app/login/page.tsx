@@ -1,6 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import { useDispatch } from "react-redux";
+import { login } from "@/store/slices/UserSlice";
+import type { User } from "@/store/slices/UserSlice";
 
 interface Payload {
   firstName?: string;
@@ -11,6 +14,8 @@ interface Payload {
 }
 
 const Login = () => {
+  const dispatch = useDispatch();
+
   const [payload, setPayload] = useState<Payload>({});
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -35,11 +40,21 @@ const Login = () => {
     const data = await response.json();
     if (data.done) {
       setPayload({});
+      const i: User = {
+        firstName: data.instance.firstName,
+        lastName: data.instance.lastName,
+        email: data.instance.email,
+        token: data.instance.token,
+      };
+
+      dispatch(login(i));
+
+      console.log(data);
+
       localStorage.setItem("__token_", data.instance.token);
     }
     setLoading(false);
     console.log(data);
-    
   };
 
   return (
@@ -83,6 +98,9 @@ const Login = () => {
                 <p className="underline text-xs font-semibold">
                   FORGET PASSWORD
                 </p>
+              </Link>
+              <Link href="/register">
+                <p className="underline text-xs font-semibold">REGISTER</p>
               </Link>
             </div>
           </div>

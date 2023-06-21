@@ -104,7 +104,7 @@ const Favorites = () => {
                 <div
                   className="border-2 mb-5"
                   style={{
-                    boxShadow: "rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;",
+                    boxShadow: "rgba(0, 0, 0, 0.25) 0px 25px 50px -12px",
                   }}
                 >
                   <div className="relative group">

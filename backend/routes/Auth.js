@@ -37,11 +37,14 @@ routes.post("/login", async (req, res) => {
     const instance = await User.findOne({ email });
 
     if (instance && (await DecPassword(instance.password, password))) {
-      const token = jwt.sign({ email }, privateKey, { algorithm: "RS256" });
+      const { firstName, lastName } = instance;
+      const token = jwt.sign({ email }, privateKey, {
+        algorithm: "RS256",
+      });
 
       instance.token = token;
       await instance.save();
-      res.json({ done: true, instance });
+      res.json({ done: true, instance: { email, firstName, lastName, token } });
     } else {
       res.json({ done: false });
     }

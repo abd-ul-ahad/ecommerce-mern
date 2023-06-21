@@ -42,7 +42,7 @@ const Login = () => {
 
   return (
     <div className="bg-[var(--light-pink)] flex justify-center items-center py-16">
-      <div className="flex justify-evenly w-full items-start">
+      <div className="flex justify-center w-full items-start">
         <div>
           <div>
             <h1 className="font-bold text-2xl mb-10">SIGN UP</h1>
@@ -119,6 +119,9 @@ const Login = () => {
                   <span className="underline"> Terms of Use</span> and
                   <span className="underline">Privacy Policy </span>.
                 </p>
+                <Link href="/login">
+                  <p className="underline text-xs font-semibold">LOGIN HERE</p>
+                </Link>
               </div>
             </div>
           </div>
