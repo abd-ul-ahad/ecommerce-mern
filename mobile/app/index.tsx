@@ -25,15 +25,13 @@ const Home = () => {
           // headerLeft: () => {}, // Shows on left side of screen title
           // headerRight: () => {}, // Shows on right side of screen title
           headerTitle: "", //Screen Title
+          
         }}
       />
 
       <ScrollView showsVerticalScrollIndicator={false}>
         <View>
-          <View>
-            <Text>{user.email}</Text>
-          </View>
-          <View></View>
+          <Text className="text-center text-lg font-bold">Home Page</Text>
         </View>
       </ScrollView>
     </SafeAreaView>
