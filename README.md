@@ -19,7 +19,6 @@ To get started with the project, follow the steps below:
 
 ```bash
 npm install -g expo-cli
-s
 ```
 
 2. Clone the repository:
